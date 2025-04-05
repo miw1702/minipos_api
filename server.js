@@ -3,6 +3,10 @@ const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
+app.get("/", (req, res) => {
+  res.send("Hello welcom to api")
+})
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
